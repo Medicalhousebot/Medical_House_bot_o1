@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>درسنامه جامع بیماری‌های روماتولوژی: لوپوس اریتماتوز سیستمیک (SLE) و سندرم آنتی‌فسفولیپید (APS)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+
+    :root {
+      --primary:    #1a237e;
+      --secondary:  #283593;
+      --accent1:    #0277bd;
+      --accent2:    #00838f;
+      --accent3:    #6a1b9a;
+      --accent4:    #ad1457;
+      --accent5:    #e65100;
+      --bg:         #f0f4ff;
+      --card:       #ffffff;
+      --text:       #1a1a2e;
+      --muted:      #546e7a;
+      --border:     #c5cae9;
+      --green:      #1b5e20;
+      --greenlight: #e8f5e9;
+      --redlight:   #ffebee;
+      --red:        #b71c1c;
+      --yellowlight:#fff8e1;
+      --yellow:     #f57f17;
+      --bluelight:  #e3f2fd;
+      --blue:       #0d47a1;
+      --purplelight:#f3e5f5;
+      --purple:     #4a148c;
+      --teallight:  #e0f7fa;
+      --teal:       #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 40%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 30px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .cover h1 {
+      font-size: 2.3em;
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .cover h2 {
+      font-size: 1.25em;
+      font-weight: 400;
+      opacity: 0.92;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px 22px;
+      font-size: 13px;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 3px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 35px auto;
+      max-width: 920px;
+      border-radius: 16px;
+      padding: 30px 35px;
+      box-shadow: 0 4px 20px rgba(26,35,126,0.08);
+      border-right: 6px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.25em;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol {
+      padding-right: 25px;
+    }
+    .toc ol li {
+      padding: 6px 0;
+      color: var(--accent1);
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+    .toc ol li a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--primary); text-decoration: underline; }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 14px;
+      padding: 18px 25px;
+      margin: 45px 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .section-header .icon {
+      font-size: 1.4em;
+      background: rgba(255,255,255,0.22);
+      border-radius: 50%;
+      width: 46px; height: 46px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #26a69a); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #ff7043); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #43a047); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #5c6bc0); }
+    .sh-pink   { background: linear-gradient(135deg, #880e4f, #e91e63); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+      border-top: 4px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-pink   { border-top-color: #880e4f; }
+
+    .subsection h4 {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 10px;
+      padding: 15px 18px;
+      margin: 16px 0;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .infobox .ib-icon { font-size: 1.35em; flex-shrink: 0; margin-top: 2px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 4px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 4px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 4px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 4px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 4px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 4px solid #006064; color: #003033; }
+
+    /* ===== LIST STYLES (SAFARI / MOBILE PROOF) ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .list-styled li {
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 3px;
+      font-size: 13px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.85;
+      color: var(--text);
+    }
+
+    /* ===== KEY-VALUE ROW (SAFARI FIX) ===== */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+    }
+    .kv-row:last-child { border-bottom: none; }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    /* ===== TAGS / PILLS ===== */
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 3px;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+    .tag-pink   { background: #fce4ec; color: #880e4f; }
+
+    /* ===== TABLE ===== */
+    .table-wrap { overflow-x: auto; margin: 18px 0; border-radius: 10px; border: 1px solid #d5daf0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 12px 14px;
+      text-align: right;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    table tbody tr:nth-child(even) { background: #f8faff; }
+    table tbody tr:hover { background: #edf2ff; }
+    table tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== GRID 2-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    @media(max-width:680px){ .grid2 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 10px;
+      padding: 15px 18px;
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 4px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 4px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 4px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 4px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 4px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 4px solid #00838f; }
+    .mini-card h5 { font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary); }
+
+    /* ===== HIGHLIGHT BADGE ===== */
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #fff176, #ffee58);
+      color: #4a2c00;
+      border: 1px solid #f9a825;
+      border-radius: 8px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    strong.em  { color: #b71c1c; }
+    strong.em2 { color: #1565c0; }
+    strong.em3 { color: #2e7d32; }
+    strong.em4 { color: #6a1b9a; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13.5px;
+      margin-top: 60px;
+      border-radius: 16px;
+      line-height: 2;
+    }
+    .footer a { color: #90caf9; text-decoration: none; }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی مینیاتوری ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 260px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== ساختار پنجره مودال مدیریت یادداشت‌ها ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.22);
+      border-radius: 50px;
+      padding: 8px 18px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 96%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="badge">دپارتمان روماتولوژی دانشگاه علوم پزشکی آزاد یزد</div>
+  <h1>لوپوس اریتماتوز سیستمیک (SLE) و سندرم آنتی‌فسفولیپید (APS)</h1>
+  <h2>درسنامه جامع آموزشی بر مبنای تدریس بالینی و اسلایدهای کلاسی ۲۰۲۶</h2>
+  <div class="meta">
+    <div class="meta-item">مدرس: <span>پروفسور محمدباقر اولیا</span></div>
+    <div class="meta-item">نویسنده: <span>احمدرضا عبداللهی پور</span></div>
+    <div class="meta-item">برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></div>
+  </div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="toc">
+  <h3>📋 فهرست تفصیلی مباحث درسنامه</h3>
+  <ol>
+    <li><a href="#sec-intro">کلیات، تعریف بنیادین و تظاهرات بالینی کلاسیک لوپوس (SLE)</a></li>
+    <li><a href="#sec-organ-involvement">تظاهرات بالینی اندام‌های مختلف در لوپوس اریتماتوز سیستمیک</a></li>
+    <li><a href="#sec-renal">پاتولوژی و کلاس‌های شش‌گانه نفریت لوپوسی (Lupus Nephritis)</a></li>
+    <li><a href="#sec-neuro-pulm">درگیری‌های حیاتی: سیستم عصبی-روانپزشکی (NPSLE) و ریوی</a></li>
+    <li><a href="#sec-cardio-hema-gi">تظاهرات قلبی-عروقی، هماتولوژیک و گوارشی در لوپوس</a></li>
+    <li><a href="#sec-epi-etio">اپیدمیولوژی، ژنتیک، ایمونوپاتوژنز و محرک‌های محیطی بیماری</a></li>
+    <li><a href="#sec-lab-criteria">پروفایل آزمایشگاهی، معیارهای طبقه‌بندی (SLICC 2012 و EULAR/ACR 2019)</a></li>
+    <li><a href="#sec-mgmt">مدیریت جامع درمانی، فارماکوتراپی، داروهای نوین و پایش دوره‌ای</a></li>
+    <li><a href="#sec-aps-patho">سندرم آنتی‌فسفولیپید (APS): ماهیت، اتوآنتی‌ژن‌ها و پاتوفیزیولوژی ترومبوز</a></li>
+    <li><a href="#sec-aps-clinic-lab">تظاهرات بالینی، موربیدیتی بارداری، آزمایش‌های سرولوژیک و ترومبوفیلی</a></li>
+    <li><a href="#sec-caps">سندرم آنتی‌فسفولیپید فاجعه‌بار (CAPS) و پروتکل‌های درمانی APS</a></li>
+  </ol>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main">
+
+  <!-- SECTION 1 -->
+  <div class="section-header sh-blue" id="sec-intro">
+    <div class="icon">🦋</div>
+    <span>بخش اول: تعریف، ماهیت بیماری و تظاهرات کلاسیک لوپوس (SLE)</span>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>مفهوم و ماهیت مولتی‌سیستمیک بیماری لوپوس</h4>
+    <p>
+      بیماری <strong>Systemic Lupus Erythematosus (SLE)</strong>، پروتوتایپ (Prototype) و الگوی کلاسیک بیماری‌های خودایمنی سیستمیک در علم پزشکی و روماتولوژی است. این بیماری با التهاب گسترده میکروواسکولار (Widespread microvascular inflammation) و تولید طیف وسیعی از اتوآنتی‌بادی‌ها (Autoantibodies) علیه آنتی‌ژن‌های خودی شناخته می‌شود.
+    </p>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">ℹ️</span>
+      <div>
+        <strong>ویژگی‌های بنیادین سیر بیماری:</strong>
+        <div class="kv-row"><span class="kv-key">طیف بالینی (Spectrum):</span><span class="kv-value">بسیار ناهمگون و گسترده؛ از اشکال بسیار خفیف، بی‌سروصدا و خفته (Indolent) تا تظاهرات برق‌آسا، صاعقه‌آسا و به شدت کشنده (Fulminant).</span></div>
+        <div class="kv-row"><span class="kv-key">الگوی بیماری:</span><span class="kv-value">بیماری مزمن با ماهیت مشخص عودکننده و فروکش‌کننده (Relapsing and Remitting course)؛ تقریباً هیچ ارگانی در بدن از تهاجم آن مصون نیست.</span></div>
+      </div>
+    </div>
+
+    <h4>تابلوی کلاسیک تظاهر اولیه (Classic Presentation)</h4>
+    <p>
+      بر اساس تأکید استاد، اگرچه بیماری بسیار هزارچهره است، تابلوی کلاسیک و شک‌برانگیز اولیه در درمانگاه که باید فوراً زنگ خطر لوپوس را به صدا درآورد، تتراد زیر در یک <strong>زن جوان</strong> است:
+    </p>
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>🚩 چهارگانه بالینی اولیه لوپوس</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>تب (Fever):</strong> تب‌های راجعه و طولانی‌مدت بدون منشأ عفونی مشخص.</span></li>
+          <li><span class="li-content"><strong>درد مفاصل (Joint pain):</strong> آرترالژی و پلی‌آرتریت متقارن متناوب.</span></li>
+          <li><span class="li-content"><strong>راش پوستی (Rash):</strong> به‌ویژه راش مالار پروانه‌ای روی صورت و گونه‌ها.</span></li>
+          <li><span class="li-content"><strong>ریزش مو (Hair loss):</strong> آلوپسی منتشر غیر اسکاردهنده به‌ویژه در خط رویش مو (Lupus hair).</span></li>
+        </ul>
+      </div>
+      <div class="mini-card mc-orange">
+        <h5>💡 نکته بالینی استاد در شرح‌حال</h5>
+        <p>
+          لوپوس بیماری است که می‌تواند با یک تظاهر تک‌سیستمی (مانند ترومبوسیتوپنی ایزوله برای سال‌ها) یا با طوفانی از علائم چندارگانی بروز کند. بنابراین حضور زن جوانی با احساس کسالت مفرط، خستگی مزمن، تب نامشخص و درد مبهم مفصلی باید همواره پزشک را به ارزیابی ایمونولوژیک لوپوس سوق دهد.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-header sh-purple" id="sec-organ-involvement">
+    <div class="icon">🦴</div>
+    <span>بخش دوم: تظاهرات بالینی اندام‌های مختلف (مفصلی، پوستی، مخاطی)</span>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>۱. تظاهرات اسکلتی-عضلانی (Musculoskeletal Manifestations)</h4>
+    <ul class="list-styled purple">
+      <li><span class="li-content"><strong>پلی‌آرتریت متناوب (Intermittent polyarthritis):</strong> مفاصل محیطی (کوچک و بزرگ دست، مچ و زانو) را درگیر می‌کند، شدیداً دردناک است اما بر خلاف آرتریت روماتوئید (RA)، ماهیتی غیرمخرب (Non-erosive) دارد.</span></li>
+      <li><span class="li-content"><strong>دفورمیتی مفصلی در ۱۰٪ بیماران:</strong> تغییر شکل‌های مفصلی نظیر انحراف اولنار یا انگشتان سوان‌نک ممکن است ایجاد شود که به آن <em>آرتروپاتی جاکود (Jaccoud’s arthropathy)</em> گفته می‌شود؛ نکته کلیدی این است که این دفورمیتی ناشی از شلی تاندونی و کپسولی است و به‌صورت دستی جااندازی می‌شود (Reducible) و فرسایش استخوانی ندارد.</span></li>
+      <li><span class="li-content"><strong>بحث اروزیون در گرافی در برابر سونوگرافی:</strong> اروزیون در عکس رادیوگرافی ساده بسیار نادر است. اگرچه در برخی منابع ذکر شده تا ۵۰٪ ممکن است در سونوگرافی دقیق اروزیون یافت شود، استاد تأکید دارند که این آمار احتمالاً اغراق‌آمیز است؛ زیرا اگر در ۵۰٪ بیماران فرسایش واقعی استخوان وجود داشت، باید تخریب مفصلی بسیار وسیع‌تر و پایدارتری در کلینیک مشاهده می‌کردیم.</span></li>
+      <li><span class="li-content"><strong>میوزیت (Myositis):</strong> ضعف عضلانی التهابی پروگزیمال می‌تواند در بستر سندرم‌های همپوشان (Overlap syndrome) نظیر لوپومیوزیت (Lupomyositis) دیده شود.</span></li>
+      <li><span class="li-content"><strong>نکروز آواسکولار (AVN - Avascular Necrosis):</strong> یک پیامد شایع و بسیار ناتوان‌کننده در استخوان‌های سر فمور و بازو است. بیشترین فاکتور خطر آن مصرف کورتیکواستروئیدها با دوز متوسط تا بالا است و در لوپوس شیوع آن حتی از سایر بیماری‌های روماتیسمی بالاتر گزارش می‌شود.</span></li>
+    </ul>
+
+    <h4>۲. تظاهرات اختصاصی پوستی در لوپوس (Lupus Specific Cutaneous Manifestations)</h4>
+    <p>تظاهرات پوستی لوپوس بر اساس کرونولوژی و هیستوپاتولوژی به سه دسته اصلی تقسیم می‌شوند:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>دسته ضایعه</th>
+            <th>اشکال بالینی</th>
+            <th>ویژگی‌های اختصاصی و نکات بالینی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>حاد (Acute Cutaneous)</strong></td>
+            <td>
+              ۱. موضعی (Localized)<br>
+              ۲. منتشر (Generalized)
+            </td>
+            <td>
+              • راش مالار (Malar Rash) یا راش پروانه‌ای: اریتم روی گونه‌ها و پل بینی با <strong class="em">حفظ چین نازولبیال (Nasolabial fold sparing)</strong>.<br>
+              • حساسیت شدید به نور خورشید (Photosensitivity) و ریزش موی منتشر.<br>
+              • فرم منتشر بسیار شدید شبیه نکرولیز اپیدرمال سمی (TEN-like lupus) که تهدیدکننده حیات است.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>تحت‌حاد (Subacute - SCLE)</strong></td>
+            <td>
+              ۱. حلقوی (Annular / Polycyclic)<br>
+              ۲. پاپولواسکواموس (Papulosquamous)
+            </td>
+            <td>
+              • پلاک‌های اریتماتوز پوسته دار روی تنه، پشت و بازوها.<br>
+              • عدم ایجاد اسکار پس از بهبودی.<br>
+              • همراهی بسیار قوی با آنتی‌بادی <strong class="em2">Anti-Ro (SSA)</strong> و احتمال همپوشانی با بیماری شوگرن (Sjögren syndrome).
+            </td>
+          </tr>
+          <tr>
+            <td><strong>مزمن (Chronic Cutaneous)</strong></td>
+            <td>
+              ۱. لوپوس دیسکوئید (DLE)<br>
+              ۲. لوپوس پروفوندوس (Profundus)<br>
+              ۳. پانیکولیت (Panniculitis)<br>
+              ۴. چیل‌بلین (Chilblain)<br>
+              ۵. لوپوس تومیدوس (Tumidus)<br>
+              ۶. DLE مخاطی
+            </td>
+            <td>
+              • پلاک‌های دیسکوئید دارای لبه‌های فعال هایپرکراتوتیک، آتروفی مرکزی، پیگمانتاسیون حاشیه‌ای و گرفتگی فولیکولی (Follicular plugging).<br>
+              • منجر به ایجاد <strong>آلوپسی اسکاردهنده دائمی (Cicatricial alopecia)</strong>.<br>
+              • علامت شوستر (Shuster sign): درگیری اختصاصی کونچال بول (Conchal bowl) گوش خارجی.<br>
+              • DLE مخاطی دهان که برخلاف زخم‌های معمول دهانی لوپوس، <strong class="em">دردناک</strong> است.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>حقایق کلیدی تظاهرات پوستی از تدریس کلاسی:</strong>
+        <div class="kv-row"><span class="kv-key">ارتباط DLE با بیماری سیستمیک:</span><span class="kv-value">فقط ۵٪ از بیماران مبتلا به DLE پوستی خالص، دچار لوپوس سیستمیک (SLE) می‌شوند.</span></div>
+        <div class="kv-row"><span class="kv-key">مثبت شدن ANA در DLE:</span><span class="kv-value">حدود ۵۰٪ از مبتلایان به DLE دارای تست ANA مثبت هستند.</span></div>
+        <div class="kv-row"><span class="kv-key">پدیده رینود (Raynaud's):</span><span class="kv-value">در بیماران مبتلا به لوپوس بسیار شایع است.</span></div>
+        <div class="kv-row"><span class="kv-key">خارش (Pruritus):</span><span class="kv-value"><strong>خارش جزو ویژگی‌های راش لوپوس نیست!</strong> وجود خارش شدید باید پزشک را به تشخیص‌های دیگر مانند درماتیت هرپتی‌فرم (Dermatitis Herpetiformis - DH) سوق دهد.</span></div>
+      </div>
+    </div>
+
+    <h4>۳. تظاهرات مخاطی و زخم‌های دهانی (Oral Ulcers)</h4>
+    <p>
+      زخم‌های دهانی و نازوفارنژیال در لوپوس مشخصاً <strong class="em">بدون درد (Usually painless)</strong> هستند. به همین دلیل بیماران ممکن است اصلاً شکایتی از آن نداشته باشند. معاینه سیستماتیک حفره دهان، به ویژه <strong>کام سخت (Hard palate)</strong> و لثه‌ها توسط پزشک الزامی است. مشاهده این اولسرها نشانه واضحی از <strong>فعالیت بیماری (Active disease flare)</strong> بوده و نشان‌دهنده نیاز به تشدید تدابیر درمانی است.
+    </p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-header sh-red" id="sec-renal">
+    <div class="icon">🔬</div>
+    <span>بخش سوم: تظاهرات کلیوی و کلاس‌های پاتولوژی نفریت لوپوسی</span>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>پاتولوژی نفریت لوپوسی (Lupus Nephritis Primer)</h4>
+    <p>
+      درگیری کلیوی از مهم‌ترین عوامل تعیین‌کننده پیش‌آگهی و بقای بیماران مبتلا به لوپوس است. درگیری می‌تواند شامل گلومرولونفریت (GN)، آسیب توبولواینترستیشیال و واسکولوپاتی عروق کلیوی باشد. طبقه‌بندی هیستوپاتولوژی بر اساس بیوپسی کلیه (انجمن بین‌المللی نفرولوژی و انجمن پاتولوژی کلیه - ISN/RPS) شامل ۶ کلاس است:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>کلاس پاتولوژی</th>
+            <th>نام بافتی</th>
+            <th>یافته‌های هیستوپاتولوژی (LM / IF / EM)</th>
+            <th>درمان القایی (Induction) و نگه‌دارنده (Maintenance)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Class I</strong></td>
+            <td>Minimal Mesangial</td>
+            <td>میکروسکوپ نوری (LM) کاملاً طبیعی؛ رسوب ایمون‌کمپلکس‌ها تنها در مزانژیوم با ایمونوفلورسانس (IF) یا میکروسکوپ الکترونی (EM) دیده می‌شود.</td>
+            <td>مهارکننده‌های رنین-آنژیوتانسین (ACEi / ARB)، کنترل دقیق فشار خون، مانیتور پروتئینوری + هیدروکسی‌کلروکین (HCQ).</td>
+          </tr>
+          <tr>
+            <td><strong>Class II</strong></td>
+            <td>Mesangial Proliferative</td>
+            <td>تکثیر سلول‌های مزانژیال (Mesangial proliferation) در میکروسکوپ نوری قابل مشاهده است.</td>
+            <td>مشابه کلاس ۱؛ کنترل علامتی، رژیم محافظت کلیوی و هیدروکسی‌کلروکین.</td>
+          </tr>
+          <tr>
+            <td><strong>Class III</strong></td>
+            <td>Focal Proliferative</td>
+            <td>ضخیم شدن لوپ‌های مویرگی در LM؛ <strong class="em">&lt; 50% گلومرول‌ها</strong> درگیر هستند؛ رسوب ایمون‌کمپلکس‌های ساب‌اندوتلیال در میکروسکوپ الکترونی.</td>
+            <td rowspan="2">
+              <strong>القایی:</strong> استروئید خوراکی/وریدی دوز بالا (پالس متیل پردنیزولون) + مایکوپفینولات موفتیل (MMF) <em>یا</em> سیکلوفسفامید (CYC).<br>
+              <strong>نگه‌دارنده:</strong> مایکوپفینولات موفتیل (MMF) ± مهارکننده کلسی‌نورین (مانند وکوسپورین / Voclosporin) یا بلیمومب (Belimumab).
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Class IV</strong></td>
+            <td>Diffuse Proliferative</td>
+            <td>ضخیم شدن لوپ‌های مویرگی، هجوم شدید سلول‌های التهابی و نکروز فیبرینوئید؛ <strong class="em">&gt; 50% گلومرول‌ها</strong> درگیر هستند؛ رسوب ساب‌اندوتلیال وسیع (شکل Wire-loop). خطرناک‌ترین فرم.</td>
+          </tr>
+          <tr>
+            <td><strong>Class V</strong></td>
+            <td>Membranous</td>
+            <td>رسوب ایمون‌کمپلکس در ناحیه <strong>ساب‌اپیتلیال (Subepithelial)</strong> و ضخیم شدن غشای پایه گلومرولی (GBM)؛ تظاهر با پروتئینوری شدید در محدوده سندرم نفروتیک.</td>
+            <td>استروئیدها + MMF (یا مهارکننده‌های کلسی‌نورین تاکرولیموس/سیکلوسپورین)؛ در صورت همزمانی با کلاس ۳ یا ۴، پروتکل پرولیفراتیو دنبال می‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>Class VI</strong></td>
+            <td>Advanced Sclerosing</td>
+            <td>بیش از <strong class="em">&gt; 90% گلومرول‌ها</strong> دچار اسکلروز گلوبال و غیرقابل بازگشت شده‌اند. بافت کلیوی تخریب شده است.</td>
+            <td>مرحله نهایی بیماری کلیوی (ESKD)؛ عدم پاسخ به داروهای سرکوبگر ایمنی؛ درمان جایگزین کلیه (همودیالیز / پیوند) + ACEi/ARB.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section-header sh-teal" id="sec-neuro-pulm">
+    <div class="icon">🧠</div>
+    <span>بخش چهارم: تظاهرات نوروسایکاتریک (NPSLE) و ریوی</span>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>تظاهرات سیستم عصبی طبق نام‌گذاری انجمن روماتولوژی آمریکا (ACR)</h4>
+    <p>
+      تظاهرات عصبی-روانی لوپوس (NPSLE) می‌تواند بسیار گسترده باشد. در هر بیمار لوپوسی با تغییر وضعیت ذهنی، تب یا علائم کانونی عصبی، <strong class="em">همیشه باید عفونت رد شود (Always infection should be ruled out)</strong> زیرا داروهای سرکوب‌گر ایمنی بیمار را مستعد مننژیت‌ها و آنسفالیت‌های فرصت‌طلب می‌کنند.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>سیستم عصبی مرکزی (CNS)</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>اختلال شناختی (Cognitive dysfunction):</strong> شایع‌ترین تظاهر CNS؛ کندی ذهنی، افت تحصیلی در جوانان، کاهش تمرکز و افت عملکرد شغلی.</span></li>
+          <li><span class="li-content"><strong>حالت گیجی حاد (Acute confusional state / Delirium)</strong></span></li>
+          <li><span class="li-content"><strong>سردرد (Headache)</strong> و اختلالات اضطرابی و خلقی (Mood disorder / افسردگی)</span></li>
+          <li><span class="li-content"><strong>مننژیت آسپتیک (Aseptic meningitis)</strong></span></li>
+          <li><span class="li-content"><strong>حوادث عروقی مغز (Cerebrovascular disease):</strong> ناشی از ترومبوز (به‌ویژه با aPL) یا واسکولیت.</span></li>
+          <li><span class="li-content"><strong>سایکوز (Psychosis) و تشنج (Seizures):</strong> تظاهرات بسیار شدید و نیازمند مداخله فوری.</span></li>
+          <li><span class="li-content"><strong>سندرم دمیلینه‌کننده شبیه ام‌اس (MS-like demyelinating syndrome):</strong> پلاک‌های دمیلیناسیون در تصویربرداری MRI مغز که تشابه کامل با MS ایجاد می‌کند.</span></li>
+          <li><span class="li-content"><strong>میلوپاتی (Myelopathy)</strong> و اختلالات حرکتی (Movement disorder مانند کُره)</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>سیستم عصبی محیطی (PNS)</h5>
+        <ul class="list-styled green">
+          <li><span class="li-content"><strong>نوروپاتی کرانیال (Cranial neuropathy):</strong> فلج عصب‌های جمجمه‌ای (به‌ویژه عصب ۳، ۴، ۶ یا ۷).</span></li>
+          <li><span class="li-content"><strong>نوروپاتی اتونوم (Autonomic neuropathy):</strong> نوسانات فشار خون، تاکی‌کاردی یا برادی‌کاردی نامتناسب.</span></li>
+          <li><span class="li-content"><strong>مونونوروپاتی و مونونوریت مولتی‌پلکس (Mononeuropathy multiplex):</strong> ناشی از ایسکمی عروق تغذیه‌کننده عصب (Vasa nervorum).</span></li>
+          <li><span class="li-content"><strong>سندرم گیلن‌باره (Guillain-Barré syndrome)</strong> و پلکسوپاتی</span></li>
+          <li><span class="li-content"><strong>میاستنی گراویس (Myasthenia gravis):</strong> همزمانی دو بیماری خودایمنی.</span></li>
+          <li><span class="li-content"><strong>پلی‌نوروپاتی حسی-حرکتی (Polyneuropathy)</strong></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>تظاهرات ریوی در لوپوس اریتماتوز سیستمیک</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>حوزه درگیری</th>
+            <th>تظاهرات بالینی</th>
+            <th>توضیحات و هشدارهای بالینی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>بیماری پلور (Pleural Disease)</strong></td>
+            <td>پلورزی (Pleurisy) و افیوژن پلور (Pleural effusion)</td>
+            <td>شایع‌ترین تظاهر ریوی لوپوس؛ درد تیپیک پلورتیک قفسه سینه همراه با تجمع مایع اگزوداتیو.</td>
+          </tr>
+          <tr>
+            <td><strong>درگیری پارانشیمال (Parenchymal)</strong></td>
+            <td>
+              • پنومونیت حاد لوپوسی (Acute lupus pneumonitis)<br>
+              • سندرم دیسترس تنفسی حاد (ARDS)<br>
+              • <strong class="em">خونریزی آلوئولار منتشر (DAH)</strong><br>
+              • پنومونیت بینابینی مزمن (Chronic interstitial pneumonitis)<br>
+              • اختلال عملکرد دیافراگم / سندرم ریه شرینک‌شده (Shrinking lung syndrome)
+            </td>
+            <td>
+              • در درگیری پارانشیم باید سریعاً عفونت رد شود.<br>
+              • <strong>خونریزی آلوئولار منتشر (DAH):</strong> فوق‌العاده خطرناک و از اورژانس‌های کشنده روماتولوژی است که ظرف چند ساعت در صورت عدم درمان تهاجمی منجر به مرگ بیمار می‌شود.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>درگیری عروق ریوی (Vascular)</strong></td>
+            <td>
+              • هیپوکسمی حاد برگشت‌پذیر<br>
+              • آمبولی ریه (PE) و حوادث ترومبوآمبولیک<br>
+              • پرفشاری شریان ریوی (Pulmonary Arterial Hypertension - PAH)
+            </td>
+            <td>همراهی بسیار نزدیک با آنتی‌بادی‌های آنتی‌فسفولیپید در بروز ترومبوز و آمبولی ریوی.</td>
+          </tr>
+          <tr>
+            <td><strong>بیماری مجاری هوایی (Airway)</strong></td>
+            <td>بیماری انسدادی ریه (Obstructive) و درگیری راه‌های هوایی فوقانی</td>
+            <td>شیوع کمتر؛ التهاب حنجره، لارنژیت و انسداد راه‌های هوایی بزرگ.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section-header sh-indigo" id="sec-cardio-hema-gi">
+    <div class="icon">🫀</div>
+    <span>بخش پنجم: تظاهرات قلبی، هماتولوژیک و گوارشی</span>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>۱. تظاهرات قلبی (Cardiac Manifestations)</h4>
+    <ul class="list-styled purple">
+      <li><span class="li-content"><strong>پریکاردیت (Pericarditis):</strong> شایع‌ترین تظاهر قلبی در لوپوس؛ درد سینه رترواسترنال که با خم شدن به جلو بهتر می‌شود.</span></li>
+      <li><span class="li-content"><strong>میوکاردیت (Myocarditis):</strong> نارسایی قلبی حاد، تاکی‌کاردی پایدار نامتناسب با درجه حرارت، و آریتمی.</span></li>
+      <li><span class="li-content"><strong>اندوکاردیت لیبمن-ساکس (Libman-Sacks endocarditis):</strong> اندوکاردیت ترومبوتیک غیرعفونی (Non-bacterial thrombotic endocarditis) که با تشکیل وژتاسیون روی هر دو سمت لایه‌های دریچه‌ای (میتارل و آئورت) مشخص می‌شود و ممکن است به نارسایی شدید دریچه‌ای و وقایع آمبولیک مغزی منجر گردد.</span></li>
+      <li><span class="li-content"><strong>بیماری عروق کرونر (CAD):</strong> آترواسکلروز تسریع‌شده ناشی از التهاب مزمن سیستمیک و مصرف طولانی کورتون.</span></li>
+      <li><span class="li-content"><strong>اختلالات هدایتی (Conduction abnormalities):</strong> بلوک‌های قلبی گره AV ناشی از التهاب یا فیبروز بافت هدایتی.</span></li>
+    </ul>
+
+    <h4>۲. تظاهرات هماتولوژیک (Hematologic Manifestations)</h4>
+    <div class="grid2">
+      <div class="mini-card mc-purple">
+        <h5>یافته‌های سلول‌های خونی</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>کم‌خونی (Anemia):</strong> شایع‌ترین فرم، آنمی بیماری مزمن (ACD) است؛ آنمی همولیتیک خودایمنی (AIHA) با تست کومبس مثبت نیز رخ می‌دهد.</span></li>
+          <li><span class="li-content"><strong>لکوپنی و لنفوپنی (Lymphopenia):</strong> کاهش مطلق لنفوسیت‌ها (&lt; 1500/mm³) نشان‌دهنده فعالیت شدید لوپوس است و ویژگی بسیار بالایی دارد.</span></li>
+          <li><span class="li-content"><strong>ترومبوسیتوپنی (Thrombocytopenia):</strong> کاهش پلاکت‌ها به‌صورت ایمنی مشابه ITP.</span></li>
+        </ul>
+      </div>
+      <div class="mini-card mc-orange">
+        <h5>💡 نکته بالینی استاد: اشتباه با ITP</h5>
+        <p>
+          بسیاری از بیماران برای سال‌ها توسط متخصصین خون با تشخیص پورپورای ترومبوسیتوپنیک ایمون (ITP) پیگیری و درمان می‌شوند، در حالی که این وضعیت تظاهر اولیه و تک‌سیستمی بیماری لوپوس بوده و با گذشت زمان سایر علائم بالینی و اتوآنتی‌بادی‌ها پدیدار می‌گردند.
+        </p>
+      </div>
+    </div>
+    <div class="kv-row"><span class="kv-key">لنفادنوپاتی و اسپلنومگالی:</span><span class="kv-value">بزرگ‌شدگی طحال و غدد لنفاوی منتشر (به ویژه گردنی و زیربغلی) در فازهای فعال بیماری بسیار شایع است.</span></div>
+
+    <h4>۳. تظاهرات دستگاه گوارش (GI Manifestations)</h4>
+    <ul class="list-styled green">
+      <li><span class="li-content"><strong>پریتونیت و سروزیت صفاقی:</strong> دردهای حاد یا منتشر شکمی و آسیت ترانسوداتیو/اگزوداتیو.</span></li>
+      <li><span class="li-content"><strong>هپاتیت لوپوسی:</strong> بالا رفتن ترانس‌آمینازهای کبدی (Transaminitis) بدون علامت یا هپاتیت حاد.</span></li>
+      <li><span class="li-content"><strong>پانکراتیت لوپوسی:</strong> یک اورژانس تهدیدکننده حیات که با دردهای شدید اپی‌گاستر و افزایش آمیلاز/لیپاز همراه است.</span></li>
+      <li><span class="li-content"><strong>کولیت لوپوسی (Lupus colitis):</strong> تظاهری شبیه بیماری‌های التهابی روده (IBD) با اسهال خونی و دردهای کولیکی.</span></li>
+      <li><span class="li-content"><strong>انتریت لوپوسی و سودواوبستراکشن (Intestinal pseudoobstruction):</strong> فلج عضلات صاف جدار روده باریک و علائم انسداد مکانیکی بدون انسداد واقعی؛ استاد اشاره کردند که در طول ۲۵ سال تنها دو بیمار با این تظاهر بسیار نادر مشاهده کرده‌اند.</span></li>
+      <li><span class="li-content"><strong>واسکولیت مزانتریک:</strong> ایسکمی حاد روده و انفارکتوس جدار روده که نیاز به جراحی اورژانس دارد.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section-header sh-orange" id="sec-epi-etio">
+    <div class="icon">🧬</div>
+    <span>بخش ششم: اپیدمیولوژی، ژنتیک، پاتوژنز و عوامل محیطی</span>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>اپیدمیولوژی و توزیع جمعیتی</h4>
+    <ul class="list-styled orange">
+      <li><span class="li-content"><strong>سن بروز:</strong> اوج شیوع بین سنین <strong>۲۰ تا ۳۰ سالگی</strong> است؛ بروز قبل از ۸ سالگی بسیار غیرمعمول است؛ هرچند از نوزادی تا سالمندی رخ می‌دهد.</span></li>
+      <li><span class="li-content"><strong>نسبت جنسیتی:</strong> در سنین باروری و فعالیت هورمونی، شیوع در زنان بسیار غالب بوده و نسبت <strong>زن به مرد ۱۰:۱ (یا ۹:۱)</strong> است.</span></li>
+      <li><span class="li-content"><strong>تغییر نسبت در سنین غیرباروری:</strong> در دوران کودکی (قبل از بلوغ) و بعد از سن ۶۵ سالگی (یائسگی)، نسبت زن به مرد کاهش یافته و به <strong>۲:۱</strong> می‌رسد که نشان‌دهنده تأثیر قوی هورمون‌های جنسی (استروژن) است.</span></li>
+      <li><span class="li-content"><strong>میزان شیوع در جامعه:</strong> حدود ۱ در ۱۰۰۰ تا ۱ در ۲۵۰۰ نفر در کل جمعیت؛ در زنان سنین باروری به <strong>۱ در ۷۰۰</strong> نفر می‌رسد.</span></li>
+    </ul>
+
+    <h4>زمینه‌های ژنتیکی و ایمونولوژیک (Genetics & Immunity)</h4>
+    <div class="infobox ib-teal">
+      <span class="ib-icon">🧬</span>
+      <div>
+        <div class="kv-row"><span class="kv-key">مطالعات GWAS:</span><span class="kv-value">بر اساس مطالعات ژنومی جدید، بین <strong>۱۰۰ تا ۵۰۰ ژن مستعدکننده</strong> شناخته شده‌اند (در حالی که در گذشته تنها ۴۰ ژن مطرح بود).</span></div>
+        <div class="kv-row"><span class="kv-key">همبستگی دوقلوها:</span><span class="kv-value">کنکوردانس در دوقلوهای تک‌تخمکی (Monozygotic twins) حدود <strong>۴۰٪</strong> است که تأییدکننده بار ژنتیکی قوی است.</span></div>
+        <div class="kv-row"><span class="kv-key">خطر انتقال در خانواده:</span><span class="kv-value">اگر مادری مبتلا به لوپوس باشد، ریسک ابتلای دخترش <strong>۱:۴۰</strong> و ریسک ابتلای پسرش <strong>۱:۲۵۰</strong> برآورد می‌شود.</span></div>
+        <div class="kv-row"><span class="kv-key">آنتی‌ژن‌های لکوسیتی انسانی (HLAs):</span><span class="kv-value">آلل‌های <strong>HLA-A1، HLA-B8 و به ویژه HLA-DR3</strong> در بیماران مبتلا به SLE شیوع بسیار بالاتری دارند.</span></div>
+        <div class="kv-row"><span class="kv-key">نقص‌های مادرزادی کمپلمان:</span><span class="kv-value">حضور آلل‌های پوچ (Null alleles) و نقایص مادرزادی اجزای اولیه کمپلمان (به‌ویژه <strong>C1q, C4, C2</strong>) با استعداد ژنتیکی بسیار شدید همراه است.</span></div>
+      </div>
+    </div>
+
+    <h4>پاتوژنز و آبشار التهابی (Pathogenesis cascade)</h4>
+    <ul class="list-styled purple">
+      <li><span class="li-content"><strong>فعال شدن ایمنی ذاتی (Innate immunity):</strong> فعال‌شدن بی‌رویه ماکروفاژها، نوتروفیل‌ها (و آزادسازی تله‌های برون‌سلولی نوتروفیلی یا NETs)، و به ویژه سلول‌های دندریتیک پلاسماسیتوئید (pDCs).</span></li>
+      <li><span class="li-content"><strong>فعال شدن ایمنی اکتسابی (Adaptive immunity):</strong> همکاری نامتناسب لنفوسیت‌های T (کمکی Th1, Th17) با سلول‌های B، تمایز به پلاسماسل‌ها و ترشح انبوه اتوآنتی‌بادی‌ها علیه آنتی‌ژن‌های هسته‌ای (ANA, dsDNA).</span></li>
+      <li><span class="li-content"><strong>نقص سلول‌های تنظیمی (Defective Tregs):</strong> ناتوانی در مهار پاسخ‌های خودایمنی.</span></li>
+      <li><span class="li-content"><strong>افزایش آپوپتوز و نقص در کلیرانس (Reduced Clearance of Apoptotic Cells):</strong> سلول‌ها سریع‌تر می‌میرند و سیستم فاگوسیتوز قادر به پاکسازی به موقع اجساد سلولی نیست؛ در نتیجه آنتی‌ژن‌های درون‌هسته‌ای روی سطح سلول‌های در حال مرگ اکسپوز شده و به عنوان محرک‌های ایمونوژن بسیار قوی عمل می‌کنند (Waste products of cell death).</span></li>
+      <li><span class="li-content"><strong>اینترفرونوپاتی تیپ ۱ و ردپای اینترفرون (Type I Interferon signature):</strong> افزایش شدید سطح اینترفرون آلفا (IFN-α) در سرم بیماران لوپوسی که توسط کمپلکس‌های ایمنی و تحریک pDCها ترشح شده و با فعال‌سازی آبشار سیتوکینی (IL-6, IL-8, TNF-α, BAFF/APRIL) التهاب پایدار ایجاد می‌کند.</span></li>
+    </ul>
+
+    <h4>عوامل خطرساز محیطی در پاتوژنز لوپوس</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>درجه قطعیت</th>
+            <th>عوامل محیطی مطرح</th>
+            <th>مکانیسم یا پیامد بالینی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>قطعی (Definite)</strong></td>
+            <td><strong>اشعه فرابنفش (Ultraviolet B light)</strong></td>
+            <td>تحریک کراتینوسیت‌ها، آپوپتوز وسیع سلولی و اوراکسپرشن ریبونوکلئوپروتئین‌های هسته‌ای در سطح پوست.</td>
+          </tr>
+          <tr>
+            <td><strong>محتمل (Probable)</strong></td>
+            <td>
+              • استروژن و پرولاکتین<br>
+              • ویروس اپشتین‌بار (EBV)<br>
+              • داروهای محرک لوپوس (Lupus-inducing drugs)
+            </td>
+            <td>
+              • مصرف استروژن پس از یائسگی بیماری را شعله‌ور می‌کند.<br>
+              • تقلید مولکولی EBV با آنتی‌ژن‌های هسته‌ای.<br>
+              • داروهای کلاسیک القاکننده: <strong>ایزونیازید، هیدرالازین، پروکائین‌آمید، متیل‌دوپا، کلرپرومازین، پنی‌سیلامین، مینوسیکلین، کینیدین، اینترفرون آلفا، و مهارکننده‌های TNF-α</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>ممکن (Possible)</strong></td>
+            <td>
+              • گرد و غبار سیلیکا (Silica dust)<br>
+              • مصرف دخانیات و سیگار<br>
+              • رژیم غذایی حاوی جوانه یونجه (Canavanine)<br>
+              • هیدروکربن‌ها و پریستان (Pristane)<br>
+              • کمبود ویتامین D و عفونت COVID-19
+            </td>
+            <td>تحریک التهاب مزمن در ماکروفاژهای آلوئولار و نقص ایمنی تنظیمی.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🩺</span>
+      <div>
+        <strong>تجربه بالینی ارزشمند استاد در مورد داروهای مهارکننده TNF-α:</strong><br>
+        با وجود اینکه در تمام کتاب‌های مرجع از مهارکننده‌های TNF-alpha (نظیر اینفلیکسیماب، اتانرسپت و آدالیموماب) به عنوان داروهای مسبب لوپوس دارویی (DILE) نام برده می‌شود، استاد با بیش از ۲۵ تا ۳۰ سال سابقه طبابت فوق‌تخصصی روماتولوژی خاطرنشان کردند که حتی یک مورد تابلوی بالینی واقعی لوپوس به دنبال مصرف این داروها در بیماران خود مشاهده نکرده‌اند؛ لذا دانشجویان نباید در تجویز این داروها نگرانی مفرط داشته باشند.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section-header sh-green" id="sec-lab-criteria">
+    <div class="icon">🧪</div>
+    <span>بخش هفتم: پروفایل آزمایشگاهی و معیارهای تشخیصی/طبقه‌بندی</span>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>بررسی‌های آزمایشگاهی پاراکلینیک</h4>
+    <ul class="list-styled green">
+      <li><span class="li-content"><strong>تست ANA (Anti-Nuclear Antibody):</strong> استاندارد طلایی آن روش ایمونوفلورسانس غیرمستقیم (FANA / IFA) است. در <strong>بیش از ۹۸٪ بیماران</strong> در طول سیر بیماری مثبت است. حساسیت بسیار بالا ولی ویژگی نسبتاً پایینی دارد (تست غربالگری ایده‌آل).</span></li>
+      <li><span class="li-content"><strong>Anti-dsDNA:</strong> اتوآنتی‌بادی بسیار اختصاصی برای SLE؛ تیتر آن با شدت فعالیت بالینی و درگیری کلیوی (نفریت) همبستگی مستقیم دارد.</span></li>
+      <li><span class="li-content"><strong>Anti-Sm (Anti-Smith):</strong> فوق‌العاده اختصاصی برای لوپوس؛ هرچند حساسیت پایینی دارد (در ۲۰-۳۰٪ بیماران مثبت است).</span></li>
+      <li><span class="li-content"><strong>آنتی‌ژن‌های قابل استخراج هسته‌ای (ENA Profile):</strong> شامل Anti-Ro (SSA), Anti-La (SSB), Anti-RNP.</span></li>
+      <li><span class="li-content"><strong>آنتی‌بادی‌های آنتی‌فسفولیپید (APA / aPL):</strong> در ۱۰ تا ۲۰ درصد بیماران لوپوسی مثبت می‌شوند.</span></li>
+      <li><span class="li-content"><strong>سطح کمپلمان سرمی (C3, C4, C1q):</strong> در لوپوس فعال، به دلیل تشکیل و رسوب ایمون‌کمپلکس‌ها، سطوح کمپلمان به شدت افت می‌کند (Hypocomplementemia).</span></li>
+      <li><span class="li-content"><strong>تست کومبس مستقیم (Direct Coombs):</strong> نشان‌دهنده حضور آنتی‌بادی روی غشای گلبول‌های قرمز (با یا بدون همولیز آشکار).</span></li>
+      <li><span class="li-content"><strong>آنالیز ادرار (Urinalysis / 24h UP):</strong> بررسی پروتئینوری، هماچوری و کست‌های سلولی (نشان‌دهنده فعالیت نفریت).</span></li>
+    </ul>
+
+    <h4>تفاوت بنیادین تشخیص بالینی (Diagnosis) در برابر طبقه‌بندی (Classification)</h4>
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>هشدار بسیار مهم بالینی استاد (Diagnosis Pitfalls):</strong><br>
+        معیارهای بین‌المللی (SLICC یا ACR/EULAR) صرفاً <strong>معیارهای طبقه‌بندی (Classification criteria)</strong> جهت استانداردسازی مطالعات پژوهشی و کارآزمایی‌های بالینی هستند! <strong>پزشک در بالین نباید تشخیص یا شروع درمان بیمار را معطل تکمیل شدن این معیارها کند.</strong> تشخیص بالینی همواره بر اساس قضاوت کلینیکال و شواهد ایمونولوژیک است؛ اگر زن جوانی با راش پروانه‌ای، آرتریت و ANA مثبت مراجعه کرد، حتی اگر هنوز امتیاز کافی معیارها را کسب نکرده باشد، باید فوراً تحت درمان لوپوس قرار گیرد تا از تخریب ارگان‌ها جلوگیری شود.
+      </div>
+    </div>
+
+    <h4>معیارهای طبقه‌بندی SLICC 2012</h4>
+    <p>
+      برای کلاسیفای شدن به عنوان SLE، وجود <strong>حداقل ۴ معیار</strong> (حداقل یک معیار بالینی و یک معیار ایمونولوژیک) الزامی است؛ <em>استثنا:</em> در صورت اثبات هیستوپاتولوژیک نفریت لوپوسی در بیوپسی کلیه، همراهی با مثبت بودن ANA یا Anti-dsDNA به تنهایی برای اثبات لوپوس کافی است. (حساسیت: ۹۶.۷٪، ویژگی: ۸۳.۷٪).
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱۱ معیار بالینی SLICC</h5>
+        <ol style="padding-right:20px; font-size:13px; line-height:1.8;">
+          <li>لوپوس پوستی حاد (شامل مالار راش، حساسیت به نور)</li>
+          <li>لوپوس پوستی مزمن (شامل ضایعات DLE)</li>
+          <li>اولسرهای دهانی یا بینی (معمولاً بدون درد)</li>
+          <li>آلوپسی غیر اسکاردهنده (Non-scarring alopecia)</li>
+          <li>سینوویت مفصلی (تورم یا درد در ۲ مفصل یا بیشتر)</li>
+          <li>سروزیت (پلوریت یا پریکاردیت)</li>
+          <li>درگیری کلیوی (پروتئینوری &gt; 0.5 g/24h یا کست RBC)</li>
+          <li>درگیری نورولوژیک (تشنج، سایکوز، میلوپاتی، نوروپاتی)</li>
+          <li>آنمی همولیتیک (Hemolytic anemia)</li>
+          <li>لکوپنی (&lt; 4000) یا لنفوپنی (&lt; 1000/mm³)</li>
+          <li>ترومبوسیتوپنی (&lt; 100,000/mm³)</li>
+        </ol>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۶ معیار ایمونولوژیک SLICC</h5>
+        <ol style="padding-right:20px; font-size:13px; line-height:1.8;">
+          <li>تیتر مثبت تست ANA بالاتر از محدوده مرجع</li>
+          <li>تیتر مثبت Anti-dsDNA بالاتر از حد نرمال</li>
+          <li>حضور اتوآنتی‌بادی Anti-Sm</li>
+          <li>آنتی‌بادی‌های ضد فسفولیپید (LAC, aCL, anti-β2GPI)</li>
+          <li>افت سطح کمپلمان سرم (Low C3, Low C4 یا Low CH50)</li>
+          <li>تست کومبس مستقیم مثبت (در غیاب آنمی همولیتیک)</li>
+        </ol>
+      </div>
+    </div>
+
+    <h4>سیستم طبقه‌بندی نوین EULAR / ACR 2019</h4>
+    <p>
+      معیار ورود اجباری (Entry Criterion): <strong>تیتر ANA ≥ 1:80</strong>. در صورت وجود، بیمار بر اساس دامنه‌های بالینی و ایمونولوژیک امتیازدهی می‌شود. برای کلاسیفیکاسیون نیاز به <strong>حداقل ۱۰ امتیاز</strong> (با حضور حداقل یک معیار در دامنه‌های بالینی) است. در هر دامنه فقط بالاترین امتیاز محاسبه می‌شود. (حساسیت: ۹۶.۱٪، ویژگی: ۹۳.۴٪).
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>دامنه‌های بالینی (Clinical Domains)</th>
+            <th>امتیاز</th>
+            <th>دامنه‌های ایمونولوژیک (Immunologic Domains)</th>
+            <th>امتیاز</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>دامنه سرشتی (Constitutional):</strong> تب (Fever)</td>
+            <td><strong>2</strong></td>
+            <td rowspan="2"><strong>آنتی‌بادی‌های آنتی‌فسفولیپید:</strong><br>Anti-cardiolipin IgG &gt; 40 GPL یا Anti-β2GP1 IgG &gt; 40 یا Lupus anticoagulant</td>
+            <td rowspan="2"><strong>2</strong></td>
+          </tr>
+          <tr>
+            <td>
+              <strong>دامنه پوستی (Cutaneous):</strong><br>
+              • آلوپسی غیر اسکاردهنده<br>
+              • اولسرهای دهانی<br>
+              • لوپوس تحت حاد جلدی یا دیسکوئید (SCLE / DLE)<br>
+              • لوپوس پوستی حاد (Acute cutaneous lupus)
+            </td>
+            <td>
+              <br>2<br>2<br>4<br><strong>6</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>دامنه مفصلی (Arthritis):</strong> سینوویت یا تندرنس حداقل در ۲ مفصل همراه با خشکی صبحگاهی</td>
+            <td><strong>6</strong></td>
+            <td rowspan="2">
+              <strong>پروتئین‌های کمپلمان:</strong><br>
+              • کاهش C3 یا کاهش C4<br>
+              • کاهش همزمان C3 و C4
+            </td>
+            <td rowspan="2">
+              <br>3<br><strong>4</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>دامنه نورولوژیک:</strong><br>
+              • دلیریوم (Delirium)<br>
+              • سایکوز (Psychosis)<br>
+              • تشنج (Seizure)
+            </td>
+            <td>
+              2<br>3<br><strong>5</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>دامنه سروزیت (Serositis):</strong><br>
+              • افیوژن پریکارد یا پلور<br>
+              • پریکاردیت حاد (Acute pericarditis)
+            </td>
+            <td>
+              5<br><strong>6</strong>
+            </td>
+            <td rowspan="3">
+              <strong>آنتی‌بادی‌های بسیار اختصاصی:</strong><br>
+              • Anti-dsDNA antibody<br>
+              • Anti-Sm antibody
+            </td>
+            <td rowspan="3">
+              <br><strong>6</strong><br><strong>6</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>دامنه هماتولوژیک:</strong><br>
+              • لکوپنی (&lt; 4000/mm³)<br>
+              • ترومبوسیتوپنی (&lt; 100,000/mm³)<br>
+              • همولیز خودایمنی (Autoimmune hemolysis)
+            </td>
+            <td>
+              3<br>4<br><strong>4</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>دامنه کلیوی (Renal):</strong><br>
+              • پروتئینوری &gt; 0.5 g/24 hr<br>
+              • نفریت لوپوسی کلاس ۲ یا ۵ در بیوپسی<br>
+              • نفریت لوپوسی کلاس ۳ یا ۴ در بیوپسی
+            </td>
+            <td>
+              4<br>8<br><strong>10</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>علل اصلی مرگ و میر در بیماران لوپوسی (بروزرسانی ۲۰۲۳)</h4>
+    <p>
+      در گذشته، علت اصلی مرگ بیماران را <strong>عفونت‌های شدید</strong> (ناشی از درمان‌های دارویی مهارکننده ایمنی کنترل‌نشده) و فعالیت مهارنشدنی خودِ بیماری تشکیل می‌داد. اما امروزه با بهبود مراقبت‌ها، علل اصلی مرگ بیماران تغییر یافته و شامل <strong>بیماری عروق کرونر قلب (CAD ناشی از آترواسکلروز تسریع‌شده) و بدخیمی‌ها (Cancers)</strong> است؛ اگرچه عفونت‌ها و عوارض ناشی از تخریب ارگان‌ها کماکان تهدید جدی محسوب می‌شوند.
+    </p>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="section-header sh-green" id="sec-mgmt">
+    <div class="icon">💊</div>
+    <span>بخش هشتم: مدیریت درمانی، فارماکوتراپی و پروتکل‌های پایش</span>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>تدابیر غیردارویی و عمومی (General Management)</h4>
+    <ul class="list-styled green">
+      <li><span class="li-content"><strong>محافظت دقیق در برابر نور آفتاب (Sun protection):</strong> استفاده مداوم از کرم‌های ضدآفتاب وسیع‌الطیف (SPF بالا) حتی در فضاهای بسته پرنور، کلاه‌های لبه‌دار و لباس‌های آستین‌بلند قبل از خروج از منزل.</span></li>
+      <li><span class="li-content"><strong>خواب کافی و باکیفیت:</strong> استراحت بازسازی‌کننده شبانه (حداقل از ۱۱-۱۲ شب تا ۶-۷ صبح) جهت تنظیم سیستم ایمنی عصبی.</span></li>
+      <li><span class="li-content"><strong>رژیم غذایی سالم و ارگانیک:</strong> مصرف غذاهای طبیعی و غیرصنعتی، پرهیز از مواد نگهدارنده و غذاهای فرآوری‌شده.</span></li>
+      <li><span class="li-content"><strong>مکمل ویتامین D:</strong> مصرف مکمل ویتامین D برای همه بیماران ضروری است. طبق پروتکل ارائه‌شده توسط استاد، تجویز میانگین ماهی یک یا دو کپسول ۵۰ هزار واحدی ویتامین D بدون تحمیل هزینه‌های آزمایشگاهی مکرر، سطح ایمنی مناسب را تضمین می‌کند.</span></li>
+    </ul>
+
+    <h4>هیدروکسی‌کلروکین (HCQ): سنگ بنای طلایی درمان لوپوس</h4>
+    <div class="infobox ib-green">
+      <span class="ib-icon">⭐</span>
+      <div>
+        <strong>ویژگی‌های درمانی Hydroxychloroquine:</strong>
+        <ul class="list-styled green">
+          <li><span class="li-content">بیش از ۵۰ سال سابقه مصرف بالینی در درمان آرتریت‌های التهابی.</span></li>
+          <li><span class="li-content">کاهش معنادار دفعات عود (Flare prevention) و افزایش طول عمر بیماران.</span></li>
+          <li><span class="li-content"><strong>کاهش خطر بلوک قلبی مادرزادی (Congenital Heart Block):</strong> در نوزادان مادران مبتلا به لوپوس نوزادی دارای Anti-Ro/SSA.</span></li>
+          <li><span class="li-content"><strong>اثرات آنتی‌ترومبوتیک:</strong> اثر محافظتی حیاتی در مهار ترومبوز در بیماران دارای آنتی‌بادی‌های آنتی‌فسفولیپید.</span></li>
+          <li><span class="li-content"><strong>نیمه‌عمر بسیار طولانی:</strong> نیمه‌عمر این دارو بسیار طولانی و بین <strong class="em">۲ تا ۳ ماه</strong> است!</span></li>
+          <li><span class="li-content"><strong>پایش عوارض دارویی:</strong> دارویی بسیار امن است اما به دلیل خطر سمیت شبکیه چشم (Retinopathy) ناشی از تجمع طولانی‌مدت، معاینات دقیق چشم‌پزشکی دوره‌ای (به ویژه در افراد بالای ۴۰ سال یا مصرف بیش از ۵ سال) الزامی است. سایر عوارض: تغییر رنگ پوست و مخاط (Hyperpigmentation) و سمیت نادر عضلانی یا قلبی.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>داروهای سرکوب‌گر ایمنی و تاییدشده‌های سازمان غذا و دارو (FDA Approved in SLE)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>نام دارو</th>
+            <th>دسته‌بندی و مکانیسم اثر</th>
+            <th>کاربرد بالینی و جایگاه درمانی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>گلوکوکورتیکوئیدها (GCs / Prednisolone)</strong></td>
+            <td>ضدالتهاب و مهارکننده ایمنی وسیع</td>
+            <td>کنترل سریع شعله‌وری حاد بیماری؛ توصیه به استفاده روزدرمیان (EOD) و کاهش سریع (Taper) به دوز نگه‌دارنده ≤ 5 mg/day و قطع دارو در صورت امکان.</td>
+          </tr>
+          <tr>
+            <td><strong>Belimumab (Benlysta)</strong></td>
+            <td>آنتی‌بادی مونوکلونال انسانی علیه محرک لنفوسیت B (Anti-BLyS)</td>
+            <td><strong>نخستین داروی بیولوژیک تأییدشده FDA در لوپوس؛</strong> بهبود تظاهرات پوستی، مخاطی، مفصلی، خونی، و اخیراً تأییدشده برای نفریت لوپوسی کلاس ۳، ۴ و ۵.</td>
+          </tr>
+          <tr>
+            <td><strong>Anifrolumab (Saphnelo®)</strong></td>
+            <td>مسدودکننده گیرنده ساب‌یونیت ۱ اینترفرون تیپ یک (Type I IFN receptor antagonist)</td>
+            <td>تأییدشده در سال‌های اخیر برای لوپوس فعال متوسط تا شدید با تظاهرات پوستی و مفصلی مقاوم.</td>
+          </tr>
+          <tr>
+            <td><strong>Voclosporin (Lupkynis™)</strong></td>
+            <td>مهارکننده کلسی‌نورین نسل جدید (Calcineurin inhibitor - مهار سلول T)</td>
+            <td>تأییدشده به صورت ترکیبی با MMF و کورتون در درمان القایی نفریت لوپوسی فعال.</td>
+          </tr>
+          <tr>
+            <td><strong>Obinutuzumab</strong></td>
+            <td>آنتی‌بادی مونوکلونال علیه مارکر لنفوسیت B (Anti-CD20)</td>
+            <td>تخلیه عمقی سلول‌های B؛ نتایج بسیار نویدبخش در نفریت لوپوسی مقاوم.</td>
+          </tr>
+          <tr>
+            <td><strong>داروهای سنتی ایمونوساپرسیو</strong></td>
+            <td>Azathioprine, MMF, Tacrolimus, Cyclophosphamide, Rituximab</td>
+            <td>درمان درگیری‌های کلیوی، ریوی، عصبی و سیتوپنی‌های شدید بر اساس پروتکل ARD 2024.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>پروتکل پایش و مانیتورینگ بیماران لوپوسی (Monitoring Guide)</h4>
+    <div class="infobox ib-teal">
+      <span class="ib-icon">🩺</span>
+      <div>
+        <strong>آزمایش‌های دوره‌ای هر ۲ الی ۳ ماه:</strong>
+        <div class="kv-row"><span class="kv-key">بررسی روتین آزمایشگاهی:</span><span class="kv-value">CBC با افتراق، پنل متابولیک پایه (BMP)، کراتینین، آنالیز ادرار (U/A)، نسبت پروتئین به کراتینین یا پروتئین ۲۴ ساعته (24h UP)، نشانگرهای التهابی ESR و CRP.</span></div>
+        <div class="kv-row"><span class="kv-key">پایش فعالیت ایمنولوژی:</span><span class="kv-value">اندازه‌گیری سطوح اتوآنتی‌بادی <strong>Anti-dsDNA</strong> و سطوح کمپلمان <strong>C3 و C4</strong>.</span></div>
+        <div class="kv-row"><span class="kv-key">نکته کلیدی استاد درباره ANA:</span><span class="kv-value"><strong class="em">تیتر ANA نباید به صورت مکرر پایش شود!</strong> نوسانات تیتر ANA با فعالیت بالینی بیماری ارتباطی ندارد و چک کردن دوره‌ای آن خطای بالینی است.</span></div>
+        <div class="kv-row"><span class="kv-key">غربالگری آسیب‌های دارویی و همراه:</span><span class="kv-value">پایش سالانه شبکیه برای سمیت HCQ، غربالگری استئوپروز و استئونکروز (DEXA scan)، پایش پروفایل لیپید و اکوکاردیوگرافی دوره‌ای جهت کنترل خطرات قلبی-عروقی.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="section-header sh-red" id="sec-aps-patho">
+    <div class="icon">🩸</div>
+    <span>بخش نهم: سندرم آنتی‌فسفولیپید (APS) - مبانی، آنتی‌ژن‌ها و پاتوفیزیولوژی</span>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>مفهوم و طبقه‌بندی سندرم آنتی‌فسفولیپید (Antiphospholipid Syndrome)</h4>
+    <p>
+      سندرم آنتی‌فسفولیپید (APS) یک اختلال ترومبوفیلیک خودایمنی سیستمیک است که با ایجاد ترومبوزهای عروقی راجعه (وریدی، شریانی، مویرگی) و/یا پیامدهای نامطلوب بارداری (سقط و مرگ جنین) همراه با حضور مداوم اتوآنتی‌بادی‌های ضد فسفولیپید در گردش خون تعریف می‌شود.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>اشکال بالینی سندرم APS</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>اولیه (Primary APS):</strong> سندرم به صورت مستقل و بدون همراهی با بیماری زمینه‌ای خودایمنی دیگری بروز می‌کند.</span></li>
+          <li><span class="li-content"><strong>ثانویه (Secondary APS):</strong> سندرم در بستر سایر بیماری‌های روماتیسمی خودایمنی بروز می‌کند؛ شایع‌ترین همراهی با <strong>لوپوس اریتماتوز سیستمیک (SLE)</strong> است، اما در شوگرن و آرتریت روماتوئید (RA) نیز دیده می‌شود.</span></li>
+        </ul>
+      </div>
+      <div class="mini-card mc-yellow">
+        <h5>شیوع در جامعه و جمعیت عمومی</h5>
+        <p>
+          حضور اتوآنتی‌بادی‌های آنتی‌فسفولیپید (aPL) در <strong>۱ تا ۵ درصد از جمعیت سالم عمومی</strong> گزارش می‌شود، اما اکثریت این افراد هرگز دچار لخته‌های خونی یا عوارض بارداری نخواهند شد. فعال‌سازی مسیر ترومبوز نیازمند حضور محرک‌های التهابی ثانویه (تئوری Two-hit hypothesis) است.
+        </p>
+      </div>
+    </div>
+
+    <h4>فسفولیپیدها و دو آنتی‌ژن پروتئینی بنیادین در APS</h4>
+    <p>
+      فسفولیپیدها مولکول‌های ساختاری غشای دولایه سلولی هستند که دارای یک سر آب‌دوست (Hydrophilic head حاوی گروه فسفات) و دو دم آب‌گریز (Hydrophobic tails مشتق از اسیدهای چرب) می‌باشند. اتوآنتی‌بادی‌های پاتوژنیک علاوه بر شارژ منفی فسفولیپیدها، پروتئین‌های اتصالی همراه با آن‌ها را شناسایی می‌کنند:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>اتوآنتی‌ژن هدف</th>
+            <th>نقش فیزیولوژیک در بدن</th>
+            <th>پیامد اتصال اتوآنتی‌بادی در سندرم APS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>بتا-۲ گلیکوپروتئین ۱<br>(β2-Glycoprotein I / β2-GPI)</strong></td>
+            <td>یک گلیکوپروتئین در گردش خون که به فسفولیپیدهای آنیونی متصل شده و به عنوان یک <strong class="em3">مهارکننده طبیعی انعقاد خون (Natural inhibitor of clot formation)</strong> عمل می‌کند.</td>
+            <td>اتصال آنتی‌بادی Anti-β2GPI به این مولکول سبب تغییر صورت‌بندی فضایی آن شده، مهار فیزیولوژیک انعقاد را برمی‌دارد و با تحریک گیرنده‌های اندوتلیال و ترومبوسیت‌ها، موجب تجمع پلاکتی و تشکیل ترومبوز می‌گردد.</td>
+          </tr>
+          <tr>
+            <td><strong>پروترومبین (Prothrombin / Factor II)</strong></td>
+            <td>پیش‌ساز ترومبین و کلیدی‌ترین فاکتور آبشار انعقاد خون جهت تبدیل فیبرینوژن به فیبرین.</td>
+            <td>اتصال آنتی‌بادی‌های ضد پروترومبین (Anti-prothrombin Ab) با افزایش فعالیت و تبدیل پروترومبین، فرآیند ایجاد ترومبوزهای میکروواسکولار را تشدید می‌کند.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>تفاوت بنیادی آنتی‌بادی‌های ناشی از عفونت و خودایمنی</h4>
+    <div class="infobox ib-purple">
+      <span class="ib-icon">🔬</span>
+      <div>
+        <strong>تفکیک پاتولوژیک بر اساس اسلایدها و تدریس استاد:</strong>
+        <div class="kv-row"><span class="kv-key">آنتی‌بادی‌های القاشده با عفونت (Infection-induced aPL):</span><span class="kv-value">در عفونت‌هایی نظیر سیفلیس، ویروس‌ها یا سپسیس، آنتی‌بادی‌های ضد فسفولیپید مستقیماً به خود کاردیولیپین خالص متصل می‌شوند و نیازی به کوفاکتور β2-GPI ندارند. به همین دلیل، سبب <strong>مثبت کاذب شدن تست‌های سرولوژیک سیفلیس (False-positive VDRL/RPR)</strong> می‌شوند و به تنهایی ایجاد لخته نمی‌کنند.</span></div>
+        <div class="kv-row"><span class="kv-key">آنتی‌بادی‌های خودایمنی (Autoimmune aPL):</span><span class="kv-value">در بیماری لوپوس و APS اولیه، آنتی‌بادی‌ها تنها زمانی به کاردیولیپین متصل می‌شوند که پروتئین <strong>β2-GPI</strong> به آن متصل شده باشد؛ این کمپلکس سه‌گانه با فعال کردن سلول‌های اندوتلیال و مونوسیت‌ها آغازگر ترومبوزهای بالینی است.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="section-header sh-pink" id="sec-aps-clinic-lab">
+    <div class="icon">🔍</div>
+    <span>بخش دهم: تظاهرات بالینی، عوارض بارداری و ارزیابی سرولوژیک APS</span>
+  </div>
+
+  <div class="subsection sub-pink">
+    <h4>تظاهرات بالینی و درصد شیوع در سندرم آنتی‌فسفولیپید</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>تظاهر بالینی</th>
+            <th>میزان شیوع (%)</th>
+            <th>توصیف و نکات تشخیصی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ترومبوز وریدهای عمقی (DVT)</strong></td>
+            <td><span class="tag tag-red">32%</span></td>
+            <td>شایع‌ترین تظاهر وریدی؛ تورم، قرمزی و ادم اندام تحتانی با خطر بالای آمبولی ریه.</td>
+          </tr>
+          <tr>
+            <td><strong>ترومبوسیتوپنی (Thrombocytopenia)</strong></td>
+            <td><span class="tag tag-orange">22%</span></td>
+            <td>کاهش پلاکت‌ها معمولاً در محدوده خفیف تا متوسط (۵۰ تا ۱۰۰ هزار) بدون خونریزی خودبه‌خودی.</td>
+          </tr>
+          <tr>
+            <td><strong>لیدو رتیکولاریس (Livedo reticularis)</strong></td>
+            <td><span class="tag tag-purple">20%</span></td>
+            <td>نمای تورمانند و تغییر رنگ ارغوانی/بنفش مشبک پوست اندام‌ها ناشی از انسداد ریزعروق سطحی.</td>
+          </tr>
+          <tr>
+            <td><strong>سکته مغزی (Stroke)</strong></td>
+            <td><span class="tag tag-red">13%</span></td>
+            <td>شایع‌ترین تظاهر شریانی؛ ترومبوز شریان‌های کاروتید و مغزی به ویژه در سنین جوانی.</td>
+          </tr>
+          <tr>
+            <td><strong>ترومبوفلبیت سطحی (Superficial thrombophlebitis)</strong></td>
+            <td><span class="tag tag-blue">9%</span></td>
+            <td>التهاب و لخته در وریدهای سطحی اندام‌ها.</td>
+          </tr>
+          <tr>
+            <td><strong>آمبولی ریه (Pulmonary embolism - PE)</strong></td>
+            <td><span class="tag tag-red">9%</span></td>
+            <td>عوارض ثانویه مهاجرت لخته‌های DVT؛ درد حاد قفسه سینه، تنگی نفس و هیپوکسی.</td>
+          </tr>
+          <tr>
+            <td><strong>مرگ و سقط جنین (Fetal loss)</strong></td>
+            <td><span class="tag tag-pink">8%</span></td>
+            <td>مرگ داخل رحمی جنین ناشی از انفارکتوس و ترومبوز عروق جفت.</td>
+          </tr>
+          <tr>
+            <td><strong>حملات ایسکمیک گذرا (TIA)</strong></td>
+            <td><span class="tag tag-blue">7%</span></td>
+            <td>نقص‌های موقت عصبی ناشی از انسداد گذرای میکروآمبولی‌ها در عروق مغزی.</td>
+          </tr>
+          <tr>
+            <td><strong>ترومبوزهای شریانی دیگر و گانگرن</strong></td>
+            <td>متغیر</td>
+            <td>انسداد عروق رتین، عروق کرونر، کلیوی، مزانتریک، نارسایی کلیه، گانگرن انگشتان و نکروز آواسکولار (AVN).</td>
+          </tr>
+          <tr>
+            <td><strong>اختلالات عصبی اختصاصی</strong></td>
+            <td>متغیر</td>
+            <td>میلیت عرضی (Transverse myelitis)، کُره، تشنج و زوال عقل مولتی‌انفارکت.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>موربیدیتی‌های بارداری در سندرم آنتی‌فسفولیپید (Pregnancy Morbidities)</h4>
+    <ul class="list-styled red">
+      <li><span class="li-content"><strong>مرگ غیرقابل توجیه جنین مورفولوژیک نرمال:</strong> در سن حاملگی <strong>هفته ۱۰ یا بالاتر</strong>.</span></li>
+      <li><span class="li-content"><strong>زایمان زودرس (Premature birth):</strong> قبل از <strong>هفته ۳۴ بارداری</strong> به علت پره‌اکلامپسی شدید، اکلامپسی یا نارسایی شدید جفت (Placental insufficiency).</span></li>
+      <li><span class="li-content"><strong>سقط‌های راجعه جنینی:</strong> سه بار یا بیشتر سقط خودبه‌خودی متوالی و غیرقابل توجیه قبل از هفته ۱۰ حاملگی.</span></li>
+    </ul>
+
+    <h4>تست‌های آزمایشگاهی تشخیصی سه‌گانه و تناقض نام «لوپوس آنتی‌کواگولانت»</h4>
+    <div class="infobox ib-blue">
+      <span class="ib-icon">🧪</span>
+      <div>
+        <strong>سه آزمون سرولوژیک استاندارد طلایی (پایدار در ۲ نوبت به فاصله حداقل ۱۲ هفته):</strong>
+        <ol style="padding-right:20px; font-size:13.5px; line-height:1.9;">
+          <li>حضور سطوح متوسط تا بالای <strong>آنتی‌کاردیولیپین (aCL)</strong> از نوع ایزوتایپ IgG یا IgM در سرم یا پلاسما.</li>
+          <li>حضور سطوح متوسط تا بالای <strong>آنتی بتا-۲ گلیکوپروتئین ۱ (anti-β2GPI)</strong> از نوع ایزوتایپ IgG یا IgM.</li>
+          <li>شناسایی <strong>لوپوس آنتی‌کواگولانت (LAC)</strong> در پلاسما در دو یا چند نوبت به فاصله حداقل ۱۲ هفته (۳ ماه).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>چرا عنوان «لوپوس آنتی‌کواگولانت (LAC)» یک نام کاملاً غلط‌انداز (Misnomer) است؟</strong>
+        <div class="kv-row"><span class="kv-key">۱. آنتی‌کواگولانت نیست:</span><span class="kv-value">برخلاف نامش، این ماده در بدن انسان (In vivo) یک فاکتور <strong>پروترومبوتیک و لخته‌ساز بسیار قوی</strong> است! علت این نام‌گذاری صرفاً آزمایشگاهی است، زیرا در لوله آزمایش (In vitro) با جذب فسفولیپیدهای معرف، زمان‌های انعقادی وابسته به فسفولیپید (مانند aPTT) را طولانی می‌کند.</span></div>
+        <div class="kv-row"><span class="kv-key">۲. مختص لوپوس نیست:</span><span class="kv-value">بیش از ۵۰٪ افرادی که دارای این اتوآنتی‌بادی هستند، مبتلا به بیماری لوپوس نیستند و دچار سندرم APS اولیه یا زمینه‌های دیگر می‌باشند.</span></div>
+      </div>
+    </div>
+
+    <h4>کدام آنتی‌بادی پیشگویی‌کننده قوی‌تری برای عواقب APS است؟ (نکته اسلاید «لک لک پیشگو»)</h4>
+    <div class="mini-card mc-purple">
+      <h5>⚡ رتبه‌بندی قدرت پیشگویی خطرات بالینی</h5>
+      <p>
+        بر اساس اسلاید کلاسی استاد، در پیش‌بینی عواقب نامطلوب بالینی و وقوع ترومبوزهای کشنده:
+      </p>
+      <ul class="list-styled purple">
+        <li><span class="li-content">تست <strong>لوپوس آنتی‌کواگولانت (LAC)</strong> بر پایه aPTT یا تست حساس‌تر <strong>dRVVT (زمان رقیق‌شده زهر افعی راسل)</strong> قدرت پیشگویی <strong>بسیار بالاتری</strong> نسبت به تست‌های aCL و anti-β2GPI دارد.</span></li>
+        <li><span class="li-content">در آزمون‌های سرولوژیک aCL و anti-β2GPI، ایزوتایپ <strong class="em">IgG</strong> بسیار قوی‌تر و خطرناک‌تر از ایزوتایپ <strong>IgM</strong>، و IgM قوی‌تر از <strong>IgA</strong> است.</span></li>
+        <li><span class="li-content">تیتر بالا در مقایسه با تیتر ضعیف همواره پیش‌آگهی بدتر و ریسک ترومبوز بالاتری را نشان می‌دهد؛ بالاترین خطر متوجه بیمارانی است که هر سه تست آن‌ها مثبت باشد (Triple Positivity).</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 11 -->
+  <div class="section-header sh-red" id="sec-caps">
+    <div class="icon">⚡</div>
+    <span>بخش یازدهم: سندرم CAPS، معیارهای جدید و درمان جامع APS</span>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>معیارهای قدیمی در برابر رویکرد نوین بالینی</h4>
+    <p>
+      در معیارهای سنتی و قدیمی (Sapporo / Sydney)، تشخیص APS بر پایه سابقه بالینی ترومبوز عروقی یا عوارض بارداری (۳ سقط متوالی زیر ۱۰ هفته، ۱ مرگ جنین بالای ۱۰ هفته یا ۱ زایمان زودرس زیر ۳۴ هفته ناشی از اکلامپسی) به همراه حداقل یک تست آزمایشگاهی مثبت در دو نوبت با فاصله ۱۲ هفته استوار بود.
+    </p>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>نقد بالینی مهم استاد بر معیارهای قبلی:</strong><br>
+        «امروزه ما در عملکرد بالینی روزمره نمی‌توانیم منتظر بمانیم تا یک زن جوان سه بار متوالی سقط جنین را تجربه کند تا بگوییم معیارهای طبقه‌بندی تکمیل شده است!» در طبابت امروزی، به محض مشاهده یک واقعه ترومبوتیک یا عارضه غیرقابل توجیه در بارداری همراه با تست‌های مثبت aPL، اقدامات تشخیصی و مداخله‌های درمانی پیشگیرانه فوراً آغاز می‌گردد.
+      </div>
+    </div>
+
+    <h4>سندرم آنتی‌فسفولیپید فاجعه‌بار (Catastrophic APS - CAPS)</h4>
+    <p>
+      <strong>CAPS (سندرم اشفر - Asherson's syndrome)</strong>، شدیدترین، حادترین و کشنده‌ترین فرم بیماری است که با ایجاد ترومبوزهای انسدادی میکروواسکولار منتشر در عروق کوچک و نارسایی همزمان چند ارگان حیاتی (Multi-organ failure) در مدت کمتر از یک هفته تعریف می‌شود.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ردیف</th>
+            <th>معیارهای تشخیصی چهارگانه سندرم CAPS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>۱</strong></td>
+            <td>سابقه قطعی بیماری APS یا اثبات حضور آنتی‌بادی‌های ضد فسفولیپید (aPL).</td>
+          </tr>
+          <tr>
+            <td><strong>۲</strong></td>
+            <td>شواهد درگیری و نارسایی حاد <strong>سه ارگان یا بافت جدید</strong> در کمتر از بازه زمانی یک هفته.</td>
+          </tr>
+          <tr>
+            <td><strong>۳</strong></td>
+            <td>تأیید هیستوپاتولوژیک انسداد عروق کوچک (Small vessel occlusion) بدون التهاب دیواره عروق حداقل در یک بافت یا اندام.</td>
+          </tr>
+          <tr>
+            <td><strong>۴</strong></td>
+            <td>تأیید مجدد آزمایشگاهی حضور aPL (لوپوس آنتی‌کواگولانت، آنتی‌کاردیولیپین یا آنتی بتا-۲ گلیکوپروتئین ۱).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>محرک‌های اصلی ایجاد CAPS (Triggers)</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content">قطع ناگهانی درمان‌های ضد انعقادی (Discontinuation of anticoagulation)</span></li>
+          <li><span class="li-content">جراحی‌های ماژور یا مینور بدون پوشش آنتی‌کواگولانت</span></li>
+          <li><span class="li-content">تروما و آسیب‌های بافتی</span></li>
+          <li><span class="li-content">عفونت‌های فعال و سیستمیک</span></li>
+        </ul>
+      </div>
+      <div class="mini-card mc-teal">
+        <h5>تشخیص‌های افتراقی حیاتی (Differential Diagnoses)</h5>
+        <ul class="list-styled purple">
+          <li><span class="li-content">انعقاد درون‌رگی منتشر (Disseminated Intravascular Coagulation - DIC)</span></li>
+          <li><span class="li-content">اندوکاردیت عفونی حاد (Infective endocarditis)</span></li>
+          <li><span class="li-content">ترومبوتیک ترومبوسیتوپنیک پورپورا و HUS (TTP / HUS)</span></li>
+          <li><span class="li-content">ترومبوسیتوپنی القاشده با هپارین (HIT)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>رویکرد درمانی و پروتکل‌های فارماکوتراپی در سندرم APS</h4>
+    <ul class="list-styled blue">
+      <li><span class="li-content"><strong>درمان‌های پیشگیرانه (Prophylactic Measures):</strong> اصلاح سبک زندگی، قطع مطلق مصرف سیگار و دخانیات، کنترل دقیق فشار خون و چربی خون، و <strong>پرهیز مطلق از مصرف قرص‌های ضدبارداری خوراکی حاوی استروژن (OCP)</strong> و درمان‌های هورمونی جانشینی به دلیل تشدید ترومبوژنز.</span></li>
+      <li><span class="li-content"><strong>داروهای ضد انعقاد (Anticoagulants):</strong> ستون فقرات درمان ترومبوز؛ شامل هپارین تجزیه‌نشده (UFH) یا هپارین‌های با وزن مولکولی پایین (LMWH نظیر انوکساپارین) در فاز حاد، و سپس تعویض به وارفارین (Warfarin) با تنظیم دقیق سطح INR هدف (معمولاً بین ۲ تا ۳، و در ترومبوزهای شریانی یا راجعه تا ۳.۵).</span></li>
+      <li><span class="li-content"><strong>داروهای ضد پلاکت (Antiplatelet Therapy):</strong> آسپرین با دوز پایین (ASA 80-100 mg/day) جهت پیشگیری اولیه در افراد با تیتر بالای aPL و پیشگیری ثانویه در ترکیب با آنتی‌کواگولانت، و در صورت لزوم کلوپیدوگرل (Clopidogrel).</span></li>
+      <li><span class="li-content"><strong>هیدروکسی‌کلروکین (Hydroxychloroquine):</strong> به ویژه در مبتلایان به لوپوس همراه با APS، به دلیل اثرات ضدالتهابی و ضدترومبوزی مکمل مصرف می‌شود.</span></li>
+      <li><span class="li-content"><strong>استاتین‌ها (Statins):</strong> درمان هایپرلیپیدمی و بهره‌گیری از اثرات محافظتی چندگانه (Pleiotropic) بر سلول‌های اندوتلیال.</span></li>
+      <li><span class="li-content"><strong>مدیریت تهاجمی فرم فاجعه‌بار (CAPS Protocol):</strong> بستری در ICU و درمان سه‌گانه فوری:
+        <br>۱. پالس وریدی کورتیکواستروئیدها (Methylprednisolone 1g/day برای ۳ روز).
+        <br>۲. پلاسمافرز مکرر (Plasma Exchange) برای پاکسازی فاکتورها و آنتی‌بادی‌ها و/یا تجویز IVIg.
+        <br>۳. آنتی‌کواگولاسیون کامل با هپارین.
+        <br>۴. داروی نوین <strong>اکولیزومب (Eculizumab):</strong> آنتی‌بادی مونوکلونال مهارکننده جزء C5 کمپلمان برای مهار میکروآنژیوپاتی ترومبوتیک مقاوم.
+      </span></li>
+    </ul>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    گروه روماتولوژی دانشگاه علوم پزشکی و خدمات بهداشتی درمانی آزاد یزد<br>
+    تدوین محتوا بر مبنای اسلایدهای رسمی و تدریس بالینی جناب آقای پروفسور محمدباقر اولیا - دی و بهمن ۱۴۰۴ (ژانویه ۲۰۲۶)<br>
+    برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a>
+  </div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===== نوار شناور ابزار چند پلتفرمی مطالعه ===== -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- پنجره مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته مهم کلاسی خود را جهت مرور سریع بنویسید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- پنجره مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده شما</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;">
+      <!-- لیست پویا به صورت خودکار پر خواهد شد -->
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن پنجره</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOGIC & SCRIPT ===== -->
+<script>
+  const storageStateKey = "sle_aps_owlia_session2026_interactive_state";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را با کشیدن انگشت یا ماوس انتخاب کنید تا یادداشت به آنجا متصل شود.");
+      return;
+    }
+
+    savedRange = selection.getRangeAt(0).cloneRange();
+    
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false);
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد. لطفا متن ساده‌تری را انتخاب کنید.");
+        }
+        savedRange = null;
+      } else {
+        alert("محدوده متن انتخاب شده معتبر نیست. لطفاً مجدداً متن را انتخاب کنید.");
+        return;
+      }
+    } else {
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("note-marker")) {
+      activeMarker = e.target;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در کل متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "Rheumatology_SLE_APS_Prof_Owlia_Session2026.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
